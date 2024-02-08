@@ -15,3 +15,4 @@
 * ls -Z /usr/share/snmp/mibs/NET-SNMP-VACM-MIB.txt
 * sudo chcon system_u:object_r:snmpd_exec_t:s0 /usr/share/snmp/mibs/NET-SNMP-VACM-MIB.txt
 * snmpwalk -v3 -u zabbix -l authPriv -a SHA -A z@bbixbakh -x AES -X z@bbixbakh 172.20.0.3
+* docker run -d --name ubuntu1 --net zabbix-net --ip 172.20.240.8 --restart unless-stopped ubuntu sleep infinity
