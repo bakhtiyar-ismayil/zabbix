@@ -1,0 +1,18 @@
+version: '3'
+services:
+  grafana:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: grafana
+    networks:
+      zabbix-net:
+        ipv4_address: 172.20.240.11
+    ports:
+      - "3000:3000"
+    restart: always
+
+networks:
+  zabbix-net:
+    external: true
+
