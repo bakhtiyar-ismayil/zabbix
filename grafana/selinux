@@ -1,0 +1,2 @@
+sudo ausearch -c 'grafana' --raw | audit2allow -M grafana_network_policy
+semodule -i grafana_network_policy.pp
