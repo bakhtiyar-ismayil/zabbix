@@ -2,7 +2,7 @@ FROM ubuntu/grafana
 
 # Update package lists
 USER root
-RUN apt-get update
+RUN apt-get update -y
 
 # Upgrade installed packages
 RUN apt-get upgrade -y
